@@ -72,13 +72,8 @@ sub superwork{
 }
 
 sub mainwork{
-    # my @keyword_list = keyword_file_to_search_keyword_list('cityescape.txt');
-    # my @search_url = map {search_keyword_to_search_url($_);} @keyword_list;
     my $search_keyword = shift;
     my $search_url = search_keyword_to_search_url($search_keyword);
-    # say to_cp949($search_keyword);
-    # say to_cp949($search_url);
-
     sub uniq{
         my @list = @_;
         if (scalar @list <= 1){
@@ -147,5 +142,5 @@ sub subwork{
     return $path;
 }
 
-superwork('america_artist.txt');
-
+# Bing에서 검색할 키워드가 있는 텍스트파일을 입력
+#superwork('america_artist.txt');
